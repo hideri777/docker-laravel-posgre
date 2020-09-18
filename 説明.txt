@@ -1,0 +1,25 @@
+Laravel + posgre
+
+pullしたら
+
+docker-compose up -d
+docker-compose exec app bash
+
+composer create-project --prefer-dist laravel/laravel my-laravel-app
+でプロジェクト作成か
+ルートディレクトリにmy-laravel-appディレクトリ作成
+
+laravelの.envを書き換え
+
+DB_CONNECTION=pgsql
+DB_HOST=postgres
+DB_PORT=5432
+DB_DATABASE=sample
+DB_USERNAME=user
+DB_PASSWORD=password
+
+docker-compose down
+
+docker-compose up -d
+
+docker-compose exec app bash
